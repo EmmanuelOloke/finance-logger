@@ -1,20 +1,4 @@
-"use strict";
-// Classes...
-class Invoice {
-    // readonly client: string;
-    // private details: string;
-    // amount: number;
-    constructor(
-    // This type of shortcut declaration only works if we're using access modifiers
-    client, details, amount) {
-        this.client = client;
-        this.details = details;
-        this.amount = amount;
-    }
-    format() {
-        return `${this.client} owes £${this.amount} for ${this.details}`;
-    }
-}
+import { Invoice } from './classes/Invoice.js';
 const invoiceOne = new Invoice('Mindera', 'Frontend Work', 2000);
 const invoiceTwo = new Invoice('EukaPay', 'Backend work', 2000);
 let invoices = [];
