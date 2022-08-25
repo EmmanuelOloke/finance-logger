@@ -1,8 +1,6 @@
 // Classes with Interface...
 import { HasFormatter } from '../interfaces/HasFormatter.js';
 
-
-
 export class Invoice implements HasFormatter {
     constructor(
         // This type of shortcut declaration only works if we're using access modifiers
