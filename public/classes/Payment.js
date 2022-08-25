@@ -1,12 +1,12 @@
-export class Invoice {
+export class Payment {
     constructor(
     // This type of shortcut declaration only works if we're using access modifiers
-    client, details, amount) {
-        this.client = client;
+    recipient, details, amount) {
+        this.recipient = recipient;
         this.details = details;
         this.amount = amount;
     }
     format() {
-        return `${this.client} owes £${this.amount} for ${this.details}`;
+        return `${this.recipient} is owed £${this.amount} for ${this.details}`;
     }
 }
