@@ -1,18 +1,10 @@
-let greet: Function;
+type StringORNum = string | number;
+type ObjWithName = {name: string, uid: StringORNum};
 
-greet = () => {
-    console.log("Hello, again!")
+const logDetails = (uid: StringORNum, item: string) => {
+    console.log(`${item} has a uid of ${uid}`);
 }
 
-const add = (a: number, b: number, c: number | string = 10) => {
-    console.log(a+b);
-    console.log(c);
+const greet = (user: ObjWithName) => {
+    console.log(`${user.name} says Hello`);
 }
-
-add(30, 10, 'chief');
-
-const minus = (a: number, b: number) => {
-    return a - b;
-}
-
-let result = minus(10, 7);
