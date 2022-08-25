@@ -1,7 +1,12 @@
 "use strict";
 // Classes...
 class Invoice {
-    constructor(client, details, amount) {
+    // readonly client: string;
+    // private details: string;
+    // amount: number;
+    constructor(
+    // This type of shortcut declaration only works if we're using access modifiers
+    client, details, amount) {
         this.client = client;
         this.details = details;
         this.amount = amount;
@@ -10,14 +15,14 @@ class Invoice {
         return `${this.client} owes £${this.amount} for ${this.details}`;
     }
 }
-const invoiceOne = new Invoice('Mindera', 'Software Engineering Work', 2000);
+const invoiceOne = new Invoice('Mindera', 'Frontend Work', 2000);
 const invoiceTwo = new Invoice('EukaPay', 'Backend work', 2000);
 let invoices = [];
 invoices.push(invoiceOne);
 invoices.push(invoiceTwo);
-invoiceOne.client = 'Google';
-invoiceTwo.amount = 5000;
-console.log(invoices);
+invoices.forEach((invoice) => {
+    console.log(invoice.client, invoice.amount, invoice.format());
+});
 // TypeCasting
 const form = document.querySelector('.new-item-form');
 //Inputs
