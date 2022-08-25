@@ -1,3 +1,2 @@
-var age;
-age = 25;
-age = true;
+"use strict";
+console.log('mario');
