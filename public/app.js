@@ -47,22 +47,30 @@ form.addEventListener('submit', (e) => {
 // }
 // console.log(docThree, docFour);
 // ENUMS...
-var ResourceType;
-(function (ResourceType) {
-    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
-    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
-    ResourceType[ResourceType["FILM"] = 2] = "FILM";
-    ResourceType[ResourceType["DIRECTOR"] = 3] = "DIRECTOR";
-    ResourceType[ResourceType["PERSON"] = 4] = "PERSON";
-})(ResourceType || (ResourceType = {}));
-const docOne = {
-    uid: 1,
-    resourceType: ResourceType.BOOK,
-    data: { title: 'The Witch Movie' }
-};
-const docTwo = {
-    uid: 10,
-    resourceType: ResourceType.PERSON,
-    data: { name: 'Sharon' }
-};
-console.log(docOne, docTwo);
+// enum ResourceType {BOOK, AUTHOR, FILM, DIRECTOR, PERSON}
+// interface Resource<T> {
+//     uid: number;
+//     resourceType: ResourceType;
+//     data: T;
+// }
+// const docOne: Resource<object> = {
+//     uid: 1,
+//     resourceType: ResourceType.BOOK,
+//     data: {title: 'The Witch Movie'}
+// }
+// const docTwo: Resource<object> = {
+//     uid: 10,
+//     resourceType: ResourceType.PERSON,
+//     data: {name: 'Sharon'}
+// }
+// console.log(docOne, docTwo);
+// TUPLES...
+// With Tuples, once we declare a position with a certain type, we cannot change it later.
+let arr = ['rio', 2, true];
+arr[0] = false;
+arr[1] = 'sharon',
+    arr = [25, false, 'pope'];
+let tup = ['pope', 27, true];
+tup[0] = 'false';
+let student;
+student = ['peter', 56];
